@@ -1,7 +1,7 @@
 Presentation
 =======
 
-This repo contains the formalisation work accompanying the paper "In Cantor Space No One Can Hear You Stream".
+This repo contains the formalisation work accompanying the ESOP'26 paper "In Cantor Space No One Can Hear You Stream".
 
 The formalization is based on a [previous work](https://github.com/coqhott/logrel-coq/) by Adjej et al ([*Martin-Löf à la Coq*, CPP'24](https://arxiv.org/abs/2310.06376)), which itself follows a similar [Agda formalization](https://github.com/mr-ohman/logrel-mltt/) (described in [*Decidability of conversion for Type Theory in Type Theory*, 2018](https://dl.acm.org/doi/10.1145/3158111)). In order to avoid some work on the syntax, this project uses the [AutoSubst](https://github.com/uds-psl/autosubst-ocaml) project to generate syntax-related boilerplate.
 
@@ -40,18 +40,3 @@ Browsing the development
 ==================
 
 The development, rendered using the [coqdoc](https://coq.inria.fr/refman/using/tools/coqdoc.html) utility, can be then browsed (as html files).
-
-Files of interest
-=================
-
-Definitions
---------
-
-The abstract syntax tree of terms is in [Ast](https://anonymous.4open.science/w/logrel-digamma-4984/coqdoc/LogRel.AutoSubst.Ast.html), the declarative typing and conversion predicates are in [DeclarativeTyping](https://anonymous.4open.science/w/logrel-digamma-4984/coqdoc/LogRel.DeclarativeTyping.html), reduction is in [UntypedReduction](https://anonymous.4open.science/w/logrel-digamma-4984/coqdoc/LogRel.UntypedReduction.html).
-
-The logical relation is defined with respect to a generic notion of typing, given in [GenericTyping](https://anonymous.4open.science/w/logrel-digamma-4984/LogRel.GenericTyping.html).
-
-Proofs
-----------
-
-The logical relation is defined in [LogicalRelation](https://anonymous.4open.science/w/logrel-digamma-4984/coqdoc/LogRel.LogicalRelation.html). It is first defined component by component, before the components are all brought together by inductive `LR` at the end of the file. The fundamental lemma of the logical relation, saying that every well-typed term is reducible, is in [Fundamental](https://anonymous.4open.science/w/logrel-digamma-4984/coqdoc/LogRel.Fundamental.html).
